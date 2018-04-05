@@ -15,22 +15,20 @@ $wellArray = array (
 </head>
 <body>
 
-     <header className="row small-header justify-content-center">
+   <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Ganges</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Interactive Video</a></li>
+  
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Deepak</a></li>
      
-             <div className="logo pull-left">
-                  <a href="/"> <img src={logo} className="small-logo" alt="logo" />
-                   <h3 className="App-title small-margin">Ganges</h3></a>
-              </div>
-
-    
-              <div className="header_right pull-right">
-                 
-                    <a href="" className="btn btn-block ganges_btn">Deepak</a>
-                
-              </div>
-            
-     
-     
-        </header>
+    </ul>
+  </div>
+</nav>
 </body>
 </html>
