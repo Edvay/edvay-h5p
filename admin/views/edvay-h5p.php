@@ -1,10 +1,7 @@
 <?php
-$example = 'example';
-$wellArray = array (
-'Arrays are a lot of fun.',
-'Bootstrap is an amazing development tool to use with PHP',
-'With bootstrap you can quickly code and design beautiful websites'
-);
+require_once('../admin/class-h5p-plugin-admin.php');
+require_once('../admin/class-h5p-content-admin.php');
+require_once('../admin/class-h5p-library-admin.php');
 $plugin = H5P_Plugin::get_instance();
 $plugin_slug = $plugin->get_plugin_slug();
 $content = new H5PContentAdmin($this->plugin_slug);
