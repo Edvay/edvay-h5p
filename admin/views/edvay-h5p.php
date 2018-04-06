@@ -3,10 +3,10 @@ require_once('../class-h5p-plugin-admin.php');
 require_once('../class-h5p-content-admin.php');
 require_once('../class-h5p-library-admin.php');
 require_once('../../public/class-h5p-plugin.php');
-$plugin = H5P_Plugin::get_instance();
-// $plugin_slug = $plugin->get_plugin_slug();
-// $content = new H5PContentAdmin($this->plugin_slug);
-// $library = new H5PLibraryAdmin($this->plugin_slug);
+// $plugin = H5P_Plugin::get_instance();
+// // $plugin_slug = $plugin->get_plugin_slug();
+$content = new H5PContentAdmin('h5p');
+$library = new H5PLibraryAdmin('h5p');
 
 ?>
 <html>
