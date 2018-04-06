@@ -5,6 +5,11 @@ $wellArray = array (
 'Bootstrap is an amazing development tool to use with PHP',
 'With bootstrap you can quickly code and design beautiful websites'
 );
+$plugin = H5P_Plugin::get_instance();
+$plugin_slug = $plugin->get_plugin_slug();
+$content = new H5PContentAdmin($this->plugin_slug);
+$library = new H5PLibraryAdmin($this->plugin_slug);
+$content->display_new_content_page();
 ?>
 <html>
 <head>
@@ -21,12 +26,10 @@ $wellArray = array (
       <a class="navbar-brand" href="#">Ganges</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Interactive Video</a></li>
-  
+      <li class="active"><a href="#">Interactive Video</a></li>  
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Deepak</a></li>
-     
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Deepak</a></li>     
     </ul>
   </div>
 </nav>
