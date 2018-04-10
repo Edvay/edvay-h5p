@@ -1,28 +1,28 @@
 <?php
 /**
- * H5P Plugin.
+ * Edvay H5P Plugin.
  *
- * Eases the creation and insertion of rich interactive content
+ * Edvay customization to H5P plugin.Eases the creation and insertion of rich interactive content
  * into you blog. Find content libraries at http://h5p.org
  *
- * @package   H5P
- * @author    Joubel <contact@joubel.com>
+ * @package   Edvay-H5P
+ * @author    Vinayak <vinayak@edvay.com>
  * @license   MIT
- * @link      http://joubel.com
- * @copyright 2014 Joubel
+ * @link      http://edvay.com
+ * @copyright 2018 Joubel
  *
  * @wordpress-plugin
  * Plugin Name:       H5P
- * Plugin URI:        http://h5p.org/wordpress
+ * Plugin URI:        http://edvay.com/h5p
  * Description:       Allows you to upload, create, share and use rich interactive content on your WordPress site.
  * Version:           1.10.1
- * Author:            Joubel
- * Author URI:        http://joubel.com
+ * Author:            Vinayak
+ * Author URI:        http://edvay.com
  * Text Domain:       h5p
  * License:           MIT
  * License URI:       http://opensource.org/licenses/MIT
  * Domain Path:       /languages
- * GitHub Plugin URI: https://github.com/h5p/h5p-wordpress
+ * GitHub Plugin URI: https://github.com/Edvay/edvay-h5p
  */
 
 // If this file is called directly, abort.
@@ -45,6 +45,13 @@ if (is_admin()) {
 }
 
 add_action('init', 'theme_functionality_urls');
+
+add_action( 'admin_menu', 'register_newpage' );
+
+function register_newpage(){
+    add_submenu_page('' ,'newpage title', 'test', 'manage_options', 'h5p/test.php', '', plugins_url( 'h5p/test.php' ), 6 );
+}
+
 
 function theme_functionality_urls() {
 
@@ -87,4 +94,13 @@ function custom_requests ( $wp ) {
 
 }
 
+function elegance_referal_init()
+{
+    if(is_page('sample-page')){   
+        $dir = plugin_dir_path( __FILE__ );
+        include($dir."test.php");
+        die();
+    }
+}
 
+add_action( 'wp', 'elegance_referal_init' );
