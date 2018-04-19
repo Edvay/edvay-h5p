@@ -44,7 +44,7 @@ if (is_admin()) {
   add_action('plugins_loaded', array('H5P_Plugin_Admin', 'get_instance'));
 }
 
-add_action('init', 'theme_functionality_urls');
+
 
 add_action( 'admin_menu', 'register_newpage' );
 
@@ -52,22 +52,6 @@ function register_newpage(){
     add_submenu_page('' ,'newpage title', 'test', 'manage_options', 'h5p/test.php', '', plugins_url( 'h5p/test.php' ), 6 );
 }
 
-
-function theme_functionality_urls() {
-
-  /* Order section by fb likes */
-  add_rewrite_rule(
-    '^tus-fotos/mas-votadas/page/(\d)?',
-    'index.php?post_type=usercontent&orderby=fb_likes&paged=$matches[1]',
-    'top'
-  );
-  add_rewrite_rule(
-    '^tus-fotos/mas-votadas?',
-    'index.php?post_type=usercontent&orderby=fb_likes',
-    'top'
-  );
-
-}
 
 
 
@@ -79,28 +63,17 @@ function custom_query_vars($vars){
 }
 
 add_action('parse_request', 'custom_requests');
-function custom_requests ( $wp ) { 
+function custom_requests ( $wp ) {
 
   $valid_actions = array('action1', 'action2');
 
   if(
     !empty($wp->query_vars['api_action']) &&
-    in_array($wp->query_vars['api_action'], $valid_actions) 
+    in_array($wp->query_vars['api_action'], $valid_actions)
   ) {
 
     // do something here
-    
+
   }
 
 }
-
-function elegance_referal_init()
-{
-    if(is_page('sample-page')){   
-        $dir = plugin_dir_path( __FILE__ );
-        include($dir."test.php");
-        die();
-    }
-}
-
-add_action( 'wp', 'elegance_referal_init' );

@@ -154,6 +154,7 @@ ns.Editor = function (library, defaultParams, replace, iframeLoaded) {
 
       // Set library if editing
       if (library) {
+        console.log("set library in library selector" + library);
         self.selector.setLibrary(library);
       }
     });

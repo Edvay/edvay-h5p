@@ -37,6 +37,7 @@
       else {
         $upload.hide();
         if (h5peditor === undefined) {
+          console.log("selected library is" + library);
           h5peditor = new ns.Editor(library, $params.val(), $editor[0]);
         }
         $create.show();

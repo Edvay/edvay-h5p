@@ -1,5 +1,5 @@
 <style type="text/css">
-	
+
 body{
 
 	padding: 0;
@@ -26,11 +26,10 @@ padding-left: 42px;
 }
 .App-title {
     font-size: 1.5em;
-    width: 19%;
     position: relative;
     margin-top: 6px;
-    font-weight: 400;
-    text-align: right;
+    font-weight: 400;  
+		color:rgb(255,255,255);
 }
 .pull-right{
 
@@ -66,7 +65,7 @@ margin:0 auto;
 position:relative;
 top:200px;
 left:0%;
- 
+
 }
 .small-logo {
 
@@ -102,26 +101,25 @@ left:0%;
 
 }
 
-</style>	
+</style>
 
 
 
  <header class="row small-header justify-content-center">
-     
+
              <div class="logo pull-left">
-                  <a href="/"> <img src="image/logo.svg" class="small-logo" alt="Ganges" />
-                   </a>
+                  <a href="/"> <img src="../wp-content/plugins/h5p/admin/images/logo.svg" class="small-logo" alt="Ganges" />
+                   <h3 class="App-title small-margin">Ganges</h3></a> </a>
               </div>
 
-    
+
               <div class="header_right pull-right">
-                   <a href="/Login" class="btn btn-block ganges_btn">Deepak</a>
-                   
-                
+                   <a href="" class="btn btn-block ganges_btn">Deepak</a>
+									 <a href="" class="btn btn-block ganges_btn">Logout</a>
               </div>
-            
-     
-     
+
+
+
         </header>
 
 

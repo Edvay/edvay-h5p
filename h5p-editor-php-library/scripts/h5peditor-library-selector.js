@@ -13,7 +13,7 @@ ns.LibrarySelector = function (libraries, defaultLibrary, defaultParams) {
   var that = this;
 
   H5P.EventDispatcher.call(this);
-
+  console.log("library selector constructor");
   try {
     this.defaultParams = JSON.parse(defaultParams);
     if (!(this.defaultParams instanceof Object)) {
@@ -65,6 +65,7 @@ ns.LibrarySelector = function (libraries, defaultLibrary, defaultParams) {
    */
   var loadLibrary = function () {
     that.trigger('editorload', that.selector.currentLibrary);
+    console.log("library selected");
     that.selector.getSelectedLibrary(librarySelectHandler);
   };
 
